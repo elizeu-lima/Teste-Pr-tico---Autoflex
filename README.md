@@ -42,7 +42,7 @@ The project follows a rigorous testing strategy to ensure data integrity and UI 
 Validates the calculation logic and API endpoints.
 
 Command: ./mvnw test
-![Backend Success](./screenshots/backend-success.pn)
+![Backend Success](./screenshots/cypres%20backend.png)
 Status: BUILD SUCCESS ✅
 
 2. Frontend E2E Tests (Cypress)
@@ -58,7 +58,7 @@ Coverage:
 
 [x] Validation of Optimized Suggestion (Industrial Chair | 50 units).
 
-![Backend Success](./screenshots/backend-success.png)
+![Cypress Frontend](./screenshots/cypress%20frontend.png)
 
 📁 Project Structure
 /backend: Java Quarkus API and database configuration.

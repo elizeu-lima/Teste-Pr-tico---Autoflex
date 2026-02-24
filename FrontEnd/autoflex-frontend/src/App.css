@@ -1,0 +1,69 @@
+/* src/App.css */
+
+/* Remove limites chatos do Vite */
+#root {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+  text-align: left !important;
+}
+
+.app-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f4f7f9;
+  overflow-x: hidden;
+}
+
+/* Header que ocupa tudo */
+.main-header {
+  background: white;
+  height: 70px;
+  border-bottom: 5px solid #003366;
+  margin-bottom: 25px;
+}
+
+.logo-box {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo-auto { color: #003366; }
+.logo-flex { color: #E31E24; }
+.logo-subtitle { font-size: 0.9rem; color: #666; margin-left: 10px; font-weight: 400; }
+
+.header-tag {
+  color: #003366;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Barra de Navegação */
+.nav-bar-custom {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.nav-pills .nav-link {
+  color: #003366;
+  font-weight: 800;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #E31E24 !important;
+  color: white !important;
+}
+
+/* Estilo para as tabelas e cards ocuparem largura total */
+.content-wrapper .card {
+  width: 100% !important;
+  border-radius: 10px;
+  border: none;
+}

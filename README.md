@@ -1,6 +1,6 @@
 # AutoFlex - Industrial Management System
 
-This project is a full-stack application designed to optimize industrial production management. It features a **Quarkus (Java)** backend, a **React (Vite)** frontend, and automated testing with **JUnit** and **Cypress**.
+This project is a full-stack application designed to optimize industrial production management. It features a **Quarkus (Java)** backend, a **React (Vite)** frontend, and automated testing with  and **Cypress**.
 
 ---
 

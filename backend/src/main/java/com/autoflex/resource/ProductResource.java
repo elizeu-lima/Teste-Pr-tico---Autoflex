@@ -28,10 +28,10 @@ public class ProductResource {
     @GET
     @Path("/suggestion")
     public Map<String, Object> getSuggestion() {
-        // 1. Busca produtos ordenados pelo maior preço (Requisito: Priorização)
+        // 1. Search for products sorted by highest price (Requirement: Prioritization)
         List<Product> products = Product.list("order by price desc");
 
-        // 2. Cria um mapa para simular o estoque atual sem alterar o banco
+        // 2. Create a map to simulate the current inventory without altering the database.
         List<RawMaterial> materials = RawMaterial.listAll();
         Map<Long, Double> tempStock = new HashMap<>();
         for (RawMaterial m : materials) {
@@ -41,13 +41,13 @@ public class ProductResource {
         List<Map<String, Object>> suggestedProduction = new ArrayList<>();
         Double totalValue = 0.0;
 
-        // 3. Lógica de cálculo
+        // 3. Calculation logic
         for (Product p : products) {
             int quantityToProduce = 0;
             boolean canProduce = true;
 
             while (canProduce) {
-                // Verifica se há estoque para todos os componentes do produto
+                // // Checks if all product components are in stock.
                 for (ProductComponent comp : p.components) {
                     Double available = tempStock.get(comp.rawMaterial.id);
                     if (available == null || available < comp.requiredQuantity) {
@@ -57,7 +57,7 @@ public class ProductResource {
                 }
 
                 if (canProduce) {
-                    // Subtrai do estoque temporário e incrementa produção
+                    // Subtract from temporary stock and increase production.
                     for (ProductComponent comp : p.components) {
                         tempStock.put(comp.rawMaterial.id, tempStock.get(comp.rawMaterial.id) - comp.requiredQuantity);
                     }

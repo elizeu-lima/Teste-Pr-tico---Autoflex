@@ -1,19 +1,19 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '../../api/api';
 
-// RF005 & RF007: Busca todos os produtos com suas composições
+// Search for all products with their compositions.
 export const fetchProducts = createAsyncThunk('products/fetch', async () => {
   const response = await api.get('/products');
   return response.data;
 });
 
-// RF005 & RF007: Salva um novo produto (incluindo a lista de materiais)
+//Save a new product (including the bill of materials).
 export const saveProduct = createAsyncThunk('products/save', async (product) => {
   const response = await api.post('/products', product);
   return response.data;
 });
 
-// RF008: Busca a lógica de sugestão que criamos no Quarkus
+// It seeks the suggestion logic that we created in Quarkus.
 export const fetchProductionSuggestion = createAsyncThunk('products/fetchSuggestion', async () => {
   const response = await api.get('/products/suggestion');
   return response.data;

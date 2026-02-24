@@ -13,7 +13,7 @@ const ProductionDashboard = () => {
   return (
     <div className="card shadow-sm border-0 fade-in">
       <div className="card-header text-white fw-bold" style={{ backgroundColor: '#003366' }}>
-        📊 SUGESTÃO OTIMIZADA DE PRODUÇÃO
+        📊 OPTIMIZED PRODUCTION SUGGESTION
       </div>
       <div className="card-body p-4">
         <div className="row mb-4">
@@ -30,7 +30,7 @@ const ProductionDashboard = () => {
         <table className="table table-hover">
           <thead className="table-light">
             <tr>
-              <th>PRODUTO</th>
+              <th>PRODUCT</th>
               <th className="text-center">QTD SUGERIDA</th>
             </tr>
           </thead>
@@ -50,4 +50,4 @@ const ProductionDashboard = () => {
   );
 };
 
-export default ProductionDashboard; // <--- ESSA LINHA É A QUE RESOLVE O ERRO DA IMAGEM!
+export default ProductionDashboard; 

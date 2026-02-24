@@ -9,24 +9,24 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* HEADER TOTALMENTE FLUIDO */}
+      {/* FULLY FLUID HEADER */}
       <header className="main-header shadow-sm">
         <div className="container-fluid px-5 d-flex justify-content-between align-items-center h-100">
           <div className="logo-box">
             <span className="logo-auto">AUTO</span>
             <span className="logo-flex">FLEX</span>
-            <small className="logo-subtitle d-none d-lg-inline"> | GESTÃO INDUSTRIAL</small>
+            <small className="logo-subtitle d-none d-lg-inline"> | INDUSTRIAL MANAGEMENT</small>
           </div>
-          <div className="header-tag">SISTEMA DE GESTÃO DE ESTOQUE E PRODUÇÃO</div>
+          <div className="header-tag">INVENTORY AND PRODUCTION MANAGEMENT SYSTEM</div>
         </div>
       </header>
 
-      {/* ÁREA DE CONTEÚDO EXPANDIDA */}
+      {/* EXPANDED CONTENT AREA*/}
       <main className="container-fluid px-5">
         <div className="row">
           <div className="col-12">
             
-            {/* NAVEGAÇÃO LARGA */}
+            {/* Wide-water navigation */}
             <nav className="nav-bar-custom mb-4 shadow-sm">
               <ul className="nav nav-pills nav-fill">
                 <li className="nav-item">
@@ -34,7 +34,7 @@ function App() {
                     className={`nav-link ${activeTab === 'dashboard' ? 'active' : ''}`}
                     onClick={() => setActiveTab('dashboard')}
                   >
-                    🚀 PRODUÇÃO
+                    🚀 PRODUCTION
                   </button>
                 </li>
                 <li className="nav-item">
@@ -42,7 +42,7 @@ function App() {
                     className={`nav-link ${activeTab === 'materials' ? 'active' : ''}`}
                     onClick={() => setActiveTab('materials')}
                   >
-                    📦 MATÉRIAS-PRIMAS
+                    📦 RAW MATERIALS
                   </button>
                 </li>
                 <li className="nav-item">
@@ -50,13 +50,13 @@ function App() {
                     className={`nav-link ${activeTab === 'products' ? 'active' : ''}`}
                     onClick={() => setActiveTab('products')}
                   >
-                    🛠️ PRODUTOS
+                    🛠️ PRODUCTS
                   </button>
                 </li>
               </ul>
             </nav>
 
-            {/* SEÇÃO DINÂMICA (FULL WIDTH) */}
+            {/* DYNAMIC SECTION (FULL WIDTH)*/}
             <div className="content-wrapper">
               {activeTab === 'dashboard' && <ProductionDashboard />}
               {activeTab === 'materials' && <MaterialCrud />}

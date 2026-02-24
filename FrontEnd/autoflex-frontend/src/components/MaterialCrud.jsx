@@ -28,7 +28,7 @@ const MaterialCrud = () => {
           <h5>Novo Material</h5>
           <form onSubmit={handleSubmit}>
             <div className="mb-2">
-              <label className="form-label small">Nome</label>
+              <label className="form-label small">Name</label>
               <input 
                 type="text" 
                 className="form-control" 
@@ -38,7 +38,7 @@ const MaterialCrud = () => {
               />
             </div>
             <div className="mb-3">
-              <label className="form-label small">Quantidade em Estoque</label>
+              <label className="form-label small">Quantity in Stock</label>
               <input 
                 type="number" 
                 className="form-control" 
@@ -46,20 +46,20 @@ const MaterialCrud = () => {
                 onChange={(e) => setNewMaterial({...newMaterial, stockQuantity: parseInt(e.target.value)})}
               />
             </div>
-            <button type="submit" className="btn btn-success w-100">Adicionar</button>
+            <button type="submit" className="btn btn-success w-100">To add</button>
           </form>
         </div>
       </div>
 
       <div className="col-md-8">
         <div className="card shadow-sm p-3">
-          <h5>Estoque Atual</h5>
+          <h5>Current Stock</h5>
           <table className="table table-hover mt-2">
             <thead className="table-light">
               <tr>
                 <th>ID</th>
-                <th>Nome</th>
-                <th>Quantidade</th>
+                <th>Name</th>
+                <th>Quantity</th>
               </tr>
             </thead>
             <tbody>

@@ -41,7 +41,7 @@ const ProductCrud = () => {
     <div className="row">
       <div className="col-md-5">
         <div className="card shadow-sm p-3 mb-4">
-          <h5>Cadastrar Produto & Receita</h5>
+          <h5>Register Product & Recipe</h5>
           <input 
             type="text" className="form-control mb-2" placeholder="Nome do Produto"
             value={product.name} onChange={(e) => setProduct({...product, name: e.target.value})}
@@ -51,14 +51,14 @@ const ProductCrud = () => {
             value={product.price} onChange={(e) => setProduct({...product, price: parseFloat(e.target.value)})}
           />
           
-          <h6 className="mt-3">Composição (RF007)</h6>
+          <h6 className="mt-3">Composition (RF007)</h6>
           {product.components.map((comp, index) => (
             <div key={index} className="d-flex gap-2 mb-2">
               <select 
                 className="form-select" 
                 onChange={(e) => handleComponentChange(index, 'rawMaterialId', e.target.value)}
               >
-                <option value="">Selecione...</option>
+                <option value="">Select...</option>
                 {materials.map(m => <option key={m.id} value={m.id}>{m.name}</option>)}
               </select>
               <input 
@@ -74,7 +74,7 @@ const ProductCrud = () => {
 
       <div className="col-md-7">
         <div className="card shadow-sm p-3">
-          <h5>Produtos Cadastrados</h5>
+          <h5>Registered Products</h5>
           <div className="list-group mt-2">
             {products.map(p => (
               <div key={p.id} className="list-group-item">
